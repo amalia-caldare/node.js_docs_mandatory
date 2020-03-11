@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1"
+  },
+  "name": "node-doc",
+  "description": "Node.js documentation",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env PORT=80 node app.js",
+    "start-dev": "cross-env PORT=3000 nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmaliaCaldare/Node.js---Documentation---Mandatory1.git"
+  },
+  "keywords": [
+    "node.js",
+    "documentation"
+  ],
+  "author": "Amalia Gheorghita Caldare",
+  "license": "ISC"
+}
