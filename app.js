@@ -27,6 +27,10 @@ app.get("/server", (req, res) =>{
     return res.sendFile(__dirname + '/public/server.html');
 })
 
+app.get("/client", (req, res) =>{
+    return res.sendFile(__dirname + '/public/client.html');
+})
+
 const port = process.env.PORT ? process.env.PORT: 3000;
 
 const server = app.listen(port, (error) => {

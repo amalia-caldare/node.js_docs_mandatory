@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Node.js</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="menu">
-            <h1>Node.js Documentation</h1>
+            <h1 id="intro">Node.js Documentation</h1>
             <h3>Content<h3>
             <ul class="menu-list">
                 <li> 
@@ -21,13 +22,49 @@
                     <a href="packages">Packages and modules</a>
                 </li>
                 <li> 
-                    <a href="index">Server-side</a>
+                    <a href="server">Server-side</a>
                 </li>
                 <li>
-                    <a href="index">Client-side</a>
+                    <a href="client">Client-side</a>
                 </li>
             </ul>
         </div>
     
         <div class="content">
-            </div>
+         <h1>Client-side development</h1>
+         <p>Client-side development takes care of the collaboration between the website and the user via the browser.  </p>
+         <p>The goal of the client-side programming is to create an user-friendly and interactive web application, following its specific requirements.</p>
+         <h2>jQuery</h2>
+         <p>jQuery is a JavaScript library used to simplfy the use of JavaScript on a website.</p>
+         <p>jQuery contains common tasks written in JavaScript, but wrapped in methods that any developer can call.</p>
+         <p>jQuery usabilities:</p>
+         <ul>
+             <li>DOM/HTML manipulation</li>
+             <li>CSS manipulation</li>
+             <li>Effects and animations</li>
+             <li>Events</li>
+         </ul>
+         <h2>Adding jQuery to your Web Page</h2>
+         <p>You can download the jQuery library from the official website or include it from a network that hosts it.</p> 
+         <p>In both ways, the source should be included inside the "script" HTML tag.</p>
+        <h2>jQuery Syntax</h2>
+        <p>Select the HTML element and perform an action</p>
+        <pre class="js-code">
+            <code> 
+                $("selector").action();
+               </code>
+       </pre>
+       <h2>budo</h2>
+       <p><span>budo</span> is a browserify server that will live reload/refresh the browser when a HTML, CSS or JavaScript file changes and it provides features for rapid prototyping.</p>
+       <p>The files will be served on port <span>9966</span> and the server will stat with a  default <span>index.html</span> file.</p>
+       <p>To enable live reload on a 'public' directory, type:</p>
+       <pre class= "commands">
+        <code>
+            budo --dir public/ --live
+        </code>
+      </pre>
+    </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </body>
+    </html>

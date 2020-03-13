@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Node.js</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="menu">
-            <h1>Node.js Documentation</h1>
+            <h1 id="intro">Node.js Documentation</h1>
             <h3>Content<h3>
             <ul class="menu-list">
                 <li> 
@@ -21,10 +22,10 @@
                     <a href="packages">Packages and modules</a>
                 </li>
                 <li> 
-                    <a href="index">Server-side</a>
+                    <a href="server">Server-side</a>
                 </li>
                 <li>
-                    <a href="index">Client-side</a>
+                    <a href="client">Client-side</a>
                 </li>
             </ul>
         </div>
@@ -36,16 +37,18 @@
             <p>Node.js allows developers to create and implement different server-side tools in JavaScript, without the usage of another programming language.</p>
 
             <h2>Express</h2>
-            <p>Express is a web application framework for Node.js development that provides a set of features to develop a web applcation. Some of the core capabilities of <span>express</span> are to handle HTTP requests at different URL paths and set common web application settings, such as ports used or to serve static folders. </p>
-            <h3>Installing express</h3>
-            <p>Express is installed with the usage of the famous <span>npm</span> commands, as with any other package or by manually adding the dependency in the package.json file, by writing the name and the desired version.</p>
+            <p>Express is a web application framework for Node.js development that provides a set of features to develop a web applcation.</p>
+            </p>Some of the core capabilities of <span>Express</span> are to handle HTTP requests at different URL paths and set common web application settings, such as ports used or to serve static folders. </p> 
+            <h3>Installing Express</h3>
+            <p>Express is installed with the usage of the famous <span>npm</span> command, as with any other package or by manually adding the dependency in the <span>package.json</span> file, by writing the name and the desired version.</p>
             <pre class= "commands">
                 <code>
                     npm install express
                 </code>
               </pre>
             <h3>Importing the Express module</h3>
-            <p>After installing Express and in order to use its capabilities, you need to import the main Express module from the installed package in your Node.js code file. This can be done by using the require() function and calling the returned object to create the Express application, as following:</p>
+            <p>After installing Express and in order to use its capabilities, you need to import the main Express module from the installed package in your Node.js code file.</p>
+            <p>This can be done by using the require() function and calling the returned object to create the Express application, as following:</p>
             <pre class="js-code">
                 <code> 
                     const express = require("express");
@@ -84,22 +87,23 @@
                   })
                    </code>
             </pre>
-            <p>The above function contains two parameters. 
-                The first parameter represents the URL or the route to which the GET method should connect. <span>'/'</span> is used to define the root of the website.
-                The second parameter is called a <span>call-back function</span> and it contains two arguments: a <span>request</span> and a <span>response</span> object.
-                <span>req</span> represnts the request sent to the server and <span>res</span> the response that will be send to the client.  
-            </p>
+            <p>The above function contains two parameters. </p>
+            <p>The first parameter represents the URL or the route to which the GET method should connect. </p>
+            <p><span>'/'</span> is used to define the root of the website.</p>
+            <p>The second parameter is called a <span>call-back function</span> and it contains two arguments: a <span>request</span> and a <span>response</span> object.</p>
+            <p><span>req</span> represnts the request sent to the server and <span>res</span> the response that will be send to the client.</p>  
+        
             
             <h3>POSTMAN</h3>
-            <p>Postman is one of the most common tools used to test an API. 
-                One of its core functionalities is working with HTTP requests. 
-                You can send your requests and see the response in the body section which will indicate of your test has run succesfully or not.
-            </p>
+            <p>Postman is one of the most common tools used to test an API. </p>
+            <p>One of its core functionalities is working with HTTP requests. </p>
+            <p>You can send your requests and see the response in the body section which will indicate if your test has run succesfully. </p>
             
           <h2>Starting the server</h2>
-          <p>After learning how to set up a request, another essential functionality provided by Express is starting the server.</p>
+          <p>After learning how to set up a request, another essential functionality provided by Express is to start the server.</p>
           <p>To start a server you need to pass the <span>port</span> number to a <span>listen()</span> function, which will tell our app on which port to run.</p>
-          <p>When developing on the server-side it is recommended to use port number <span>3000</span>.</p>
+          <p>When developing it is recommended to use port number <span>3000</span> and for production port <span>80</span>.</p>
+          <p id="tip">TIP: Make use of the <span>cross-env</span> package to support crossing operating systems and avoid errors.</p>
           <p>Here is an example on how to start a server:</p>
           <pre class="js-code">
             <code> 
@@ -113,10 +117,10 @@
                </code>
             </pre>
             <p>The first parameter of the function represents the port number, while the second one is optional, but commonly used to receive feedback on how the application is running.</p>
-            
+           
          <h2>Serving static files</h2>
-         <p>Express provides a <span>static()</span> function used to server static files to your web application.
-             The static files can be images, CSS or other JavaScript file, usually stored in a directory.</p>
+         <p>Express provides a <span>static()</span> function used to server static files to your web application.</p>
+         <p>The static files can be images, CSS or other JavaScript file, usually stored in a directory.</p>
              <pre class="js-code">
                 <code> 
                   app.use(express.static('public'));
@@ -138,6 +142,6 @@
         </div>
                
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./index.js"></script>
+    
 </body>
 </html>
