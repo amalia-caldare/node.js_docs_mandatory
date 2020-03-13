@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <h1>Node.js Documentation</h1>
+            <h3>Content<h3>
+            <ul class="menu-list">
+                <li> 
+                    <a href="index">Introduction to Node.js</a>
+                </li>
+                <li> 
+                    <a href="javascript">JavaScript concepts</a>
+                </li>
+                <li> 
+                    <a href="packages">Packages and modules</a>
+                </li>
+                <li> 
+                    <a href="index">Server-side</a>
+                </li>
+                <li>
+                    <a href="index">Client-side</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="content">
+
+ 
+        <h1>Packages and modules</h1>
+        <p>When developing with Node.js, there are two terms that are frequently used and it is improtant to grasp their meaning from the beginning.</p>
+        <p><span>Modules</span> represnt functionalities/ libraries organized in JavaScript files which can be reused throughout a Node.js application.</p>
+        <p><span>Packages</span> are used to group together files which offer relevant tools. A package contains modules.</p>
+        <p>Once you install a package, it will be installed as a dependency together with its modules.</p>
+    
+        <h2>NPM</h2>
+        <p>NPM or Node Package Manager is the default package manager for Node.js.</p>
+        <p> Node.js instalation comes with the <span>npm</span> command, which allows developers to download and install packages.</p>
+        <p>When a package is installed in a project, it is considered as being a dependency.</p>
+        <p>In order to keep track of the dependencies of the project, they have to be listed in a package.json file.</p>
+        <p>Package.json contains informations about the project and its dependencies and it is essential for both NPM and other end users of the application. It uses the <span>"key": "value"</span> pair format, the key representing a property with its defined value.</p>
+        <p>Common properties of a package.json file:</p>
+        <ul>
+            <li>"name": the name of the package.</li>
+            <li>"version": </li>
+            <li>"main": </li>
+            <li>"repository": </li>
+            <li>"scripts": allows to specify commands that are run at various times in the package
+                <p>The "scripts" property is commonly used to define differences between the production and the development side. To run a script type the following command:</p>
+                <pre class= "commands">
+                    <code>
+                        npm run [script-name]
+                    </code>
+                </pre>
+                </li>
+            <li>"dependencies": defines the other modules used by the package, by taking their name and the version of each dependency</li>
+        </ul>
+
+        <h3>Creating a new package.json file</h3>
+        <p>Type the following command:</p>
+        <pre class= "commands">
+            <code>
+                npm init
+            </code>
+        </pre>
+       <p>Answer the questionnaire provived in the command line.</p>
+
+       <h3>Installing a package</h3>
+       <p>If your project already contains the package.json file, by typing:</p>
+       <pre class= "commands">
+        <code>
+            npm install
+        </code>
+      </pre>
+      <p>it will store all packages, as dependencies and along with their modules, in the <span>node_modules</span> folder.</p>
+     
+      <p>If you want to install a specific package, type:</p>
+      <pre class= "commands">
+        <code>
+            npm install [package-name]
+        </code>
+      </pre>
+      <p>To list the installed packages, you can type:</p>
+      <pre class= "commands">
+        <code>
+            npm ls
+        </code>
+      </pre>
+      <p>If you want to run a package without installing it, type:</p>
+      <pre class= "commands">
+        <code>
+            npm install npx
+            npx [command]
+        </code>
+      </pre>
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

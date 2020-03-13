@@ -1,8 +1,8 @@
-$('html').css({"font-size":"15px","color":"white"})
+$('html').css({"font-size":"21px","color":"white"})
 $('body').css({
     "margin" : "0",
     "min-height":"100%",
-    "overflow":"hidden"})
+    })
 
 $('wrapper').css({
     "position" : "absolute",
@@ -26,13 +26,27 @@ $('.content').css({
     "margin-left": "300px",
     "min-height": "100%",
     "color":"black",
-    "text-align": "center"
+    "padding-left":"20px"
 })
 
-$('h1').css({
-    "font-style":"italic"})
-$('ul').css({
+$('.js-code').css({
+    "background-color": "#eee",
+    "border-radius": "3px",
+    "font-family": "courier, monospace",
+    "padding": "0 3px",
+})
+$('.commands').css({
+    "background-color": "black",
+    "color": "white",
+    "border-radius": "3px",
+    "font-family": "courier, monospace",
+    "padding": "0 3px",
+})
+$('.command').css({"boder": "1px solid", "display":"inline-flex"})
+$('.menu-list').css({
     "list-style":"none",
     "display":"block",
-    "margin-top": "20%"
-        })
+    "margin-top": "20%",})
+$('span').css({
+    "font-weight":"bold"
+})

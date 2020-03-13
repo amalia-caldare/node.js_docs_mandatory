@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <h1>Node.js Documentation</h1>
+            <h3>Content<h3>
+            <ul class="menu-list">
+                <li> Node.js Introduction</li>
+                <li> JavaScript concepts</li>
+                <li> Element 3</li>
+                <li> Element 4</li>
+                <li> Element 5</li>
+            </ul>
+        </div>
+
+    <div class="content">
+        <h1>JavaScript</h1>
+        <p>Before diving into the Node.js journey, it is important to have a good understanding of the basic JavaScript concepts. </p>
+        <p>JavaScript is a programming language which uses programs called scripts. </p>
+
+        <h2>Variables</h2>
+        <p>JavaScript variables are containers used to store values. The variable are declared by using the var or let keywords. Const is also used for variables with constant value.</p>
+            <pre class="js-code"> 
+                <code>
+                     var firstVariable;
+                     let secondVariable;
+                     const constantVariable;
+                </code>
+            </pre>
+        <p>Once you declare a variable you can give it a value</p>
+            <pre class="js-code">
+                 <code>
+                    firstVariable = 'Jon';
+                </code>
+            </pre>
+        <h2>Data types</h2>
+        <p>Variables hold values of different data types. JavaScript data types:</p>
+        <ul>
+            <li>String: a sequence of text enclosed in quote marks
+                <pre class="js-code">
+                     <code> 
+                         let name= 'Jon';
+                        </code>
+                </pre>
+            </li>
+            <li>Number: a number</li>
+                  <pre class="js-code">
+                     <code> 
+                         let age= 20;
+                        </code>
+                 </pre>
+            <li>Boolean: a true/false value, with <span>true</span> or <span>false</span> as keywords
+                <pre class="js-code">
+                    <code> 
+                        let variable = true;
+                    </code>
+                </pre>
+            </li>
+            <li>Array: a structure that makes possible to store multiple values in a single variable
+                <pre class="js-code">
+                    <code> 
+                        let array= ['Jon', 20, 'Rasmus', 30];
+                        array[2];  // refer to a specific element of the array 
+                    </code>
+                </pre>
+            </li>
+            <li>Object: collections of related data in the form of <span>key:value</span> pairs 
+                <pre class="js-code">
+                    <code> 
+                        let person = {
+                            "name": 'Jon'
+                            "age": '20'
+                        }
+                    </code>
+                </pre>
+            </li>
+        </ul>
+
+        <h2>Functions</h2>
+        <p>Functions are used to package a functionality that you want to reuse. When performing a specific task you can call a function, instead of rewriting the code every time. </p>
+        <p>You can define your own functions or use the ones already built into the browser.</p>
+        <pre class="js-code">
+            <code> 
+                alert("Hello!"); // built-in function
+
+                function addition(x, y) {
+                    return x + y;
+                }
+                addition(2, 6); // defined function
+            </code>
+        </pre>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+</html>
