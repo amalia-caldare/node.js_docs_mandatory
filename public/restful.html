@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Node.js</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <h1 id="intro"> Node.js Documentation </h1>
+            <h3>Content:<h3>
+            <ul class="menu-list">
+                <li> 
+                    <a href="index">Introduction to Node.js</a>
+                </li>
+                <li> 
+                    <a href="javascript">JavaScript concepts</a>
+                </li>
+                <li> 
+                    <a href="packages">Packages and modules</a>
+                </li>
+                <li> 
+                    <a href="restful">REST API</a>
+                </li>
+                <li> 
+                    <a href="server">Server-side</a>
+                </li>
+                <li>
+                    <a href="client">Client-side</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="content">
+            <h1>REST API</h1>
+            <p>Node.js is commonly used for bulding <span>REST</span> based <span>APIs</span>.</p>
+            <h2>What is a REST API?</h2>
+            <p><span>API</span> stands for application programming interface and represents a set of rules that allow programs to talk with each other over a protocol. </p>
+            <p><span>REST</span> determines the architecture of the API, rules followed by developers when creating an <span>API</span>.</p>
+            <p>It allows two computer systems to communicate over the HTTP protocol, following the <span>client-server</span> principle.</p>
+            <img width=700px src="Client-Server.png">
+            <p>The <span>client</span> makes an <span>HTTP request</span> for a specific <span>URL</span>, the request is routed to a <span>server</span> that will return a <span>response</span>.</p>
+            <h2>URL</h2>
+            <p> The <span>URL</span> is the endpoint or route of a request and it usually contains a domain, port and path. </p>  
+
+            <h2>CRUD and HTTP methods</h2>
+            <p>REST follows four simple HTTP operations which are to <span>CREATE, READ, UPDATE</span> and <span>DELETE</span> data, commonly named <span>CRUD</span> operations. </p>
+            <p>All the HTTP requests made in a RESTful API map to application CRUD operations and they are handled by the so-called HTTP methods.</p>
+            <table>
+                <tr>
+                    <th>HTTP METHOD</th>
+                    <th>CRUD</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>READ</td>
+                    <td>returns requested data</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>CREATE</td>
+                    <td>creates new data</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>UPDATE</td>
+                    <td>updates requested data</td>
+                </tr>
+                <tr>
+                    <td>DELETE</td>
+                    <td>DELETE</td>
+                    <td>deletes requested data</td>
+                </tr>
+            </table>
+        </div>
+   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./index.js"></script>
+    
+    </body>
+    </html>

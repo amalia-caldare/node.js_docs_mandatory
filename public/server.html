@@ -22,6 +22,9 @@
                     <a href="packages">Packages and modules</a>
                 </li>
                 <li> 
+                    <a href="restful">REST API</a>
+                </li>
+                <li> 
                     <a href="server">Server-side</a>
                 </li>
                 <li>
@@ -38,7 +41,7 @@
 
             <h2>Express</h2>
             <p>Express is a web application framework for Node.js development that provides a set of features to develop a web applcation.</p>
-            </p>Some of the core capabilities of <span>Express</span> are to handle HTTP requests at different URL paths and set common web application settings, such as ports used or to serve static folders. </p> 
+            </p>Some of the core capabilities of <span>Express</span> are to handle HTTP requests at different URL paths and set common web application settings, such as ports used or serve static folders. </p> 
             <h3>Installing Express</h3>
             <p>Express is installed with the usage of the famous <span>npm</span> command, as with any other package or by manually adding the dependency in the <span>package.json</span> file, by writing the name and the desired version.</p>
             <pre class= "commands">
@@ -56,29 +59,48 @@
                    </code>
             </pre>
             <h3>Create and handle the HTTP requests</h3>
-            <p>Express includes functions for handling the typical requests used in a RESTful API:</p>
+            <p>Express includes functions for handling the CRUD operations of a RESTful API:</p>
             <ul>
-                <li>GET: retrieve data from a specified resource</li>
-                <li>POST: submit data to a specified resource </li>
-                <li>PUT: update the specified</li>
-                <li>DELETE: delete a specified resource </li>
+                <li><span>GET</span>: get resource from the server</li>
+                <li><span>POST</span>: create new resource on the server</li>
+                <li><span>PUT</span>: update a resource from the server</li>
+                <li><span>DELETE</span>: delete a resource from the server </li>
             </ul>
-            <p>In order to send data using HTTP requets an URL is needed to define and indetify the data in the web. This is possible with the usage of the URL Parameters:</p>
+
+            <pre class="js-code">
+                <code> 
+                  app.get('/path', (req, res) => {return res;})
+                  app.post('/path', (req, res) => { return res;})
+                  app.put('/path/:id, (req, res) { return res;})
+                  app.delete('/path/:id', (req, res)) { return res;})
+                   </code>
+            </pre>
+            <p>All the above functions contain two parameters.</p>
+            <p>The first parameter represents the URL or the <span>path</span> to which the GET method should connect. </p>
+            <p>The second parameter is called a <span>call-back function</span> and it contains two arguments: a <span>request</span> and a <span>response</span> object.</p>
+            <p><span>req</span> represnts the request sent to the server and <span>res</span> the response that will be returned to the client.</p> 
+        
+        
+            <h3>THE PATH</h3>
+            <p>In order to send data using HTTP requets an URL is needed to define and identify the data in the web - the endpoint URL.</p>
+            <p><span>The path</span> represents the last component of an URL and it identifies the resource you are requesting for.</p>
+            <p>Paths allow you to link to different parts of a website.</p>
+            <p>To filter or organize the content requested in HTTP method, the path can be combined with values called <span>URL Parameters</span>, such as:</p>
             <ul>
-                <li>Path Variable: should be used when you want to identify an item
+                <li>Path Variables: should be used when you want to identify an item
                     <pre class="js-code">
                         <code> 
                             "users/:id"
                            </code>
                 </li>
-                <li>Query String : should be used when you want to sort or filter items
+                <li>Query Strings : should be used when you want to sort or filter items
                     <pre class="js-code">
                         <code> 
                            ".users?name=value"
                            </code>
                 </li>
             </ul>
-            
+
             <h3>Example of GET request using Express</h3>
             <pre class="js-code">
                 <code> 
@@ -87,18 +109,15 @@
                   })
                    </code>
             </pre>
-            <p>The above function contains two parameters. </p>
-            <p>The first parameter represents the URL or the route to which the GET method should connect. </p>
-            <p><span>'/'</span> is used to define the root of the website.</p>
-            <p>The second parameter is called a <span>call-back function</span> and it contains two arguments: a <span>request</span> and a <span>response</span> object.</p>
-            <p><span>req</span> represnts the request sent to the server and <span>res</span> the response that will be send to the client.</p>  
-        
+            <p id="tip">TIP: <span>'/'</span> is used to define the root of the website.</p>
+            
             
             <h3>POSTMAN</h3>
             <p>Postman is one of the most common tools used to test an API. </p>
             <p>One of its core functionalities is working with HTTP requests. </p>
-            <p>You can send your requests and see the response in the body section which will indicate if your test has run succesfully. </p>
-            
+            <p>You can send your requests and see the response in the body section, as a JSON object, which will indicate if your test has run succesfully. </p>
+            <p>Example of GET Request using POSTMAN: </p>
+            <img width=700px src="POSTMAN.JPG">
           <h2>Starting the server</h2>
           <p>After learning how to set up a request, another essential functionality provided by Express is to start the server.</p>
           <p>To start a server you need to pass the <span>port</span> number to a <span>listen()</span> function, which will tell our app on which port to run.</p>
