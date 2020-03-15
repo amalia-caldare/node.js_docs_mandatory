@@ -1,4 +1,4 @@
 # Node.js---Documentation---Mandatory1
 
-Server running on port 80
-To start the server type: npm run start
+This application is running on port 80
+Start the server by typing : npm run start
