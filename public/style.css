@@ -33,6 +33,7 @@ body {
 }
 .menu-list{
     list-style: none;
+    font-weight: bold;
 }
 
 .content{
@@ -89,3 +90,9 @@ table {width: 100%;
 th, td {
     border: 1px solid black;
   }
+
+li ul{
+    display: none;
+    font-size: 13px;
+    list-style: none;
+}

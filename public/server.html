@@ -9,26 +9,57 @@
 <body>
     <div class="wrapper">
         <div class="menu">
-            <h1 id="intro">Node.js Documentation</h1>
-            <h3>Content<h3>
+            <h1 id="intro"> Node.js Documentation </h1>
             <ul class="menu-list">
                 <li> 
                     <a href="index">Introduction to Node.js</a>
+                    <ul>
+                        <li>What is Node.js?</li>
+                        <li>Installing Node.js</li>
+                        <li>Running Node.js script</li>
+                    </ul>
                 </li>
                 <li> 
                     <a href="javascript">JavaScript concepts</a>
+                    <ul>
+                        <li>Variables</li>
+                        <li>Data types</li>
+                        <li>Functions</li>
+                    </ul>
                 </li>
                 <li> 
                     <a href="packages">Packages and modules</a>
+                    <ul>
+                        <li>Definition</li>
+                        <li>NPM and package.json</li>
+                    </ul>
                 </li>
                 <li> 
                     <a href="restful">REST API</a>
+                    <ul>
+                        <li>What is a REST API?</li>
+                        <li>URL</li>
+                        <li>CRUD and HTTP methods</li>
+                    </ul>
                 </li>
                 <li> 
                     <a href="server">Server-side</a>
+                    <ul>
+                        <li>Express</li>
+                        <li>Create and handle HTTP requests</li>
+                        <li>Starting the server</li>
+                        <li>Serving static files</li>
+                        <li>nodemon</li>
+                    </ul>
                 </li>
                 <li>
                     <a href="client">Client-side</a>
+                    <ul>
+                    <li>jQuery</li>
+                    <li>Adding jQuery to web page</li>
+                    <li>jQuery syntax</li>
+                    <li>budo</li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -58,7 +89,7 @@
                     const app = express();
                    </code>
             </pre>
-            <h3>Create and handle the HTTP requests</h3>
+            <h2>Create and handle the HTTP requests</h2>
             <p>Express includes functions for handling the CRUD operations of a RESTful API:</p>
             <ul>
                 <li><span>GET</span>: get resource from the server</li>
@@ -109,15 +140,16 @@
                   })
                    </code>
             </pre>
-            <p id="tip">TIP: <span>'/'</span> is used to define the root of the website.</p>
+            <p id="tip">TIP: Use <span>'/'</span> as your path to define/access the root of the website.</p>
             
             
             <h3>POSTMAN</h3>
             <p>Postman is one of the most common tools used to test an API. </p>
             <p>One of its core functionalities is working with HTTP requests. </p>
             <p>You can send your requests and see the response in the body section, as a JSON object, which will indicate if your test has run succesfully. </p>
-            <p>Example of GET Request using POSTMAN: </p>
-            <img width=700px src="POSTMAN.JPG">
+            <h3>Example of GET Request using POSTMAN: </h3>
+            <img width=650px src="POSTMAN.PNG">
+            <p>GET request for the /devices path, returns the response assigned to the GET method as a JSON object: <span>"key": "value"</span> pair.</p>
           <h2>Starting the server</h2>
           <p>After learning how to set up a request, another essential functionality provided by Express is to start the server.</p>
           <p>To start a server you need to pass the <span>port</span> number to a <span>listen()</span> function, which will tell our app on which port to run.</p>
@@ -146,7 +178,7 @@
                    </code>
                 </pre>
 
-        <h3>NODEMON</h3>
+        <h2>nodemon</h2>
         <p><span>nodemon</span> is a tool used to develop node.js applications by automatically restarting the application when file changes are made.</p>
         <p><span>nodemon</span> is a replacement for the <span>node</span> command used to run a file and it re-runs the application instead of doing it manually.</p>
         <p>To install <span>nodemon</span> globally, type:</p>
@@ -161,6 +193,7 @@
         </div>
                
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
     
 </body>
 </html>
