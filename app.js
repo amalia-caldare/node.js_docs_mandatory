@@ -11,6 +11,10 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use(express.static('images'));
 
+app.get("/", (req,res) =>{
+    return res.sendFile(__dirname + '/public/index.html');
+});
+
 app.get("/index", (req,res) =>{
     return res.sendFile(__dirname + '/public/index.html');
 });
