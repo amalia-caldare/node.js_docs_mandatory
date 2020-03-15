@@ -61,6 +61,12 @@
                     <li>budo</li>
                     </ul>
                 </li>
+                <li>
+                    <a href="first">Node.js steps</a>
+                    <ul>
+                        <li>Create your first Node.js app</li>
+                    </ul>
+                </li>
             </ul>
         </div>
     
@@ -187,13 +193,16 @@
                 npm install -g nodemon
             </code>
           </pre>
-        
-        <p></p>
 
+        </div>
         </div>
                
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./index.js"></script>
+    <script>
+        $('li').hover(function(){
+            $(this).children('ul').stop().slideToggle(400);
+       });
+       </script>
     
 </body>
 </html>

@@ -63,6 +63,12 @@
                     <li>budo</li>
                     </ul>
                 </li>
+                <li>
+                    <a href="first">Node.js steps</a>
+                    <ul>
+                        <li>Create your first Node.js app</li>
+                    </ul>
+                </li>
             </ul>
         </div>
     
@@ -90,18 +96,24 @@
                </figure>
            </div>
            <h2>Running a Node.js script from command line</h2>
-           <p>To run a Node.js script from the command line you need to use the availabe node command and add the name of the file to be executed. Make sure to be in the same directory as the node.js file.</p>
+           <p>To run a Node.js script from the command line you need to use the availabe node command and add the name of the file to be executed. </p>
+           <p>Make sure to be in the same directory as the node.js file.</p>
            <pre class= "commands">
                <code>
                    node app.js
                </code>
            </pre>
+           <p id="tip">TIP: Press <span>CTRL C</span> to stop the programme.</p>
        </div>
-        </div>
     </div>
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./index.js"></script>
+
+    <script>
+     $('li').hover(function(){
+         $(this).children('ul').stop().slideToggle(400);
+    });
+    </script>
 
 </body>
 </html>

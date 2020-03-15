@@ -13,8 +13,7 @@ body {
 
 .wrapper{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    margin-bottom: 5px;
 }
 
 .menu{
@@ -40,7 +39,7 @@ body {
     margin-left: 300px;
     min-height: 100%;
     padding-left: 20px;
-    color: #3D4647
+    color: #3D4647;
 }
 
 span{
@@ -95,4 +94,20 @@ li ul{
     display: none;
     font-size: 13px;
     list-style: none;
+}
+
+.text{
+    outline:  solid black;
+    background-color: white;
+    list-style: none;
+    text-align: center;
+}
+#slider1next{
+    border: solid black;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+
 }

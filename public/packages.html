@@ -61,6 +61,12 @@
                     <li>budo</li>
                     </ul>
                 </li>
+                <li>
+                    <a href="first">Node.js steps</a>
+                    <ul>
+                        <li>Create your first Node.js app</li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <div class="content">
@@ -130,16 +136,21 @@
             npm ls
         </code>
       </pre>
-      <p>If you want to run a package without installing it, type:</p>
+      <p>If you want to run a package without installing it make use of the <span>npx</span> command, by typing: </p>
       <pre class= "commands">
         <code>
             npm install npx
             npx [command]
         </code>
       </pre>
+        </div>
+        </div>
         
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./index.js"></script>
-  
+    <script>
+        $('li').hover(function(){
+            $(this).children('ul').stop().slideToggle(400);
+       });
+       </script>
 </body>
 </html>

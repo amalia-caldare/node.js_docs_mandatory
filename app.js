@@ -34,7 +34,9 @@ app.get("/client", (req, res) =>{
 app.get("/restful", (req, res) =>{
     return res.sendFile(__dirname + '/public/restful.html');
 })
-
+app.get("/first", (req, res) =>{
+    return res.sendFile(__dirname + '/public/first-node.html');
+})
 const port = process.env.PORT ? process.env.PORT: 3000;
 
 const server = app.listen(port, (error) => {

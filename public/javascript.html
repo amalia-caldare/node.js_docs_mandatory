@@ -61,6 +61,12 @@
                     <li>budo</li>
                     </ul>
                 </li>
+                <li>
+                    <a href="first">Node.js steps</a>
+                    <ul>
+                        <li>Create your first Node.js app</li>
+                    </ul>
+                </li>
             </ul>
         </div>
     <div class="content">
@@ -69,7 +75,8 @@
         <p>JavaScript is a programming language which uses programs called scripts. </p>
 
         <h2>Variables</h2>
-        <p>JavaScript variables are containers used to store values. The variable are declared by using the var or let keywords. Const is also used for variables with constant value.</p>
+        <p>JavaScript variables are containers used to store values. </p>
+        <p>The variable are declared by using the <span>var</span> or <span>let</span> keywords. <span>Const</span> is used for variables with constant value.</p>
             <pre class="js-code"> 
                 <code>
                      var firstVariable;
@@ -86,28 +93,28 @@
         <h2>Data types</h2>
         <p>Variables hold values of different data types. JavaScript data types:</p>
         <ul>
-            <li>String: a sequence of text enclosed in quote marks
+            <li><span>String</span>: a sequence of text enclosed in quote marks
                 <pre class="js-code">
                      <code> 
                          let name= 'Jon';
                     </code>
                 </pre>
             </li>
-            <li>Number: a number
+            <li><span>Number</span>: a number
                   <pre class="js-code">
                      <code> 
                            let age= 20;
                     </code>
                  </pre>
              </li>
-            <li>Boolean: a true/false value, with <span>true</span> or <span>false</span> as keywords
+            <li><span>Boolean</span>: a true/false value, with <span>true</span> or <span>false</span> as keywords
                 <pre class="js-code">
                     <code> 
                         let variable = true;
                     </code>
                 </pre>
             </li>
-            <li>Array: a structure that makes possible to store multiple values in a single variable
+            <li><span>Array</span>: a structure that makes possible to store multiple values in a single variable
                 <pre class="js-code">
                     <code> 
                         let array= ['Jon', 20, 'Rasmus', 30];
@@ -128,7 +135,8 @@
         </ul>
 
         <h2>Functions</h2>
-        <p>Functions are used to package a functionality that you want to reuse. When performing a specific task you can call a function, instead of rewriting the code every time. </p>
+        <p>Functions are used to package a functionality that you want to reuse. </p>
+        <p>When performing a specific task you can call a function, instead of rewriting the code every time. </p>
         <p>You can define your own functions or use the ones already built into the browser.</p>
         <pre class="js-code">
             <code> 
@@ -141,9 +149,14 @@
             </code>
         </pre>
     </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./index.js"></script>
+    <script>
+        $('li').hover(function(){
+            $(this).children('ul').stop().slideToggle(400);
+       });
+       </script>
 
 
 </body>

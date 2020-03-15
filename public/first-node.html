@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="style.css">
     <title>Node.js</title>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="menu">
             <h1 id="intro"> Node.js Documentation </h1>
+           
             <ul class="menu-list">
                 <li> 
                     <a href="index">Introduction to Node.js</a>
@@ -71,46 +73,50 @@
         </div>
     
         <div class="content">
-         <h1>Client-side development</h1>
-         <p>Client-side development takes care of the collaboration between the website and the user via the browser.  </p>
-         <p>The goal of the client-side programming is to create an user-friendly and interactive web application, following its specific requirements.</p>
-         <h2>jQuery</h2>
-         <p>jQuery is a JavaScript library used to simplfy the use of JavaScript on a website.</p>
-         <p>jQuery contains common tasks written in JavaScript, but wrapped in methods that any developer can call.</p>
-         <p>jQuery usabilities:</p>
-         <ul>
-             <li>DOM/HTML manipulation</li>
-             <li>CSS manipulation</li>
-             <li>Effects and animations</li>
-             <li>Events</li>
-         </ul>
-         <h2>Adding jQuery to your Web Page</h2>
-         <p>You can download the jQuery library from the official website or include it from a network that hosts it.</p> 
-         <p>In both ways, the source should be included inside the "script" HTML tag.</p>
-        <h2>jQuery Syntax</h2>
-        <p>Select the HTML element and perform an action</p>
-        <pre class="js-code">
-            <code> 
-                $("selector").action();
-               </code>
-       </pre>
-       <h2>budo</h2>
-       <p><span>budo</span> is a browserify server that will live reload/refresh the browser when a HTML, CSS or JavaScript file changes and it provides features for rapid prototyping.</p>
-       <p>The files will be served on port <span>9966</span> and the server will stat with a  default <span>index.html</span> file.</p>
-       <p>To enable live reload on a 'public' directory, type:</p>
-       <pre class= "commands">
-        <code>
-            budo --dir public/ --live
-        </code>
-      </pre>
-    </div>
-    </div>
+          
+              <h1>Steps to create your first Node.js app with Express</h1>
+              <button id="slider1next" >Click me for the next step</button>
+            
+        <div class="steps">
+        <ul>
+        <li class="text" id="first_one">
+            <p>Plan your Node.js app design and its functionalities </p>
+            <p id="tip">TIP: Use <span>jspaint.app</span> to prototype.</p>
+            
+        </li>
+        <li class="text" id="second_one" style="display:none">
+            <p>Create a directory to hold your application</p>
+            <p id="tip">TIP: Think of storing the source code in a <span>git repository</span>. </p>
+        </li>
+        <li class="text" id="third_one" style="display:none">
+            <p>Create the package.json file to describe your project and its properties and install Express </p>
+            <p id="tip">TIP: Make use of the commands provided by <scan>npm</scan>.</p>
+        </li>
+        <li class="text" id="forth_one" style="display:none">
+            <p>Import the Express module, add the port and start the server.</p>
+            <p id="tip">TIP: Use the <span>scripts</span> property to specify commands for starting and running the application. 
+                Don't forget about <span>nodemon</span>!</p>
+        </li>​
+        <li class="text" id="fifth_one" style="display:none">
+            <h2>Congratulations! You have launched your first Node.js application!</h2>
+            <p id="tip">TIP: Check the Node.js app on <span>localhost:portnumber</span>, use the available documentation and make your app <span>RESTful</span>. </p>
+        </li>
+    </ul>
+        </div>
+        </div>
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
             $('li').hover(function(){
                 $(this).children('ul').stop().slideToggle(400);
            });
-           </script>
+        
+           $("#slider1next").click(function(){
+              $(".text:visible").next().show();
+             });
+        </script>
+        
+    
     </body>
     </html>
