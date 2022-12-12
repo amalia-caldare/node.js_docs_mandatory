@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "cross-env": "^7.0.2",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "name": "node-doc",
   "description": "Node.js documentation",
